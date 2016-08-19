@@ -20,7 +20,7 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="space-bg" translatesAutoresizingMaskIntoConstraints="NO" id="L5c-yL-vhO"/>
@@ -65,38 +65,65 @@
                                                         <subviews>
                                                             <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y8v-Wu-TmN">
                                                                 <state key="normal" backgroundImage="7"/>
+                                                                <connections>
+                                                                    <action selector="onNumberPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fiq-Y8-H0J"/>
+                                                                </connections>
                                                             </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9S2-jl-A3Z">
+                                                            <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9S2-jl-A3Z">
                                                                 <state key="normal" backgroundImage="8"/>
+                                                                <connections>
+                                                                    <action selector="onNumberPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="i6c-qo-5YF"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0aP-jh-46B">
                                                                 <state key="normal" backgroundImage="9"/>
+                                                                <connections>
+                                                                    <action selector="onNumberPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="npF-OZ-zPF"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="270" horizontalCompressionResistancePriority="740" distribution="fillEqually" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="crv-1s-2Xj">
                                                         <subviews>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kvh-Kw-IPB">
+                                                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kvh-Kw-IPB">
                                                                 <state key="normal" backgroundImage="4"/>
+                                                                <connections>
+                                                                    <action selector="onNumberPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hNE-Gj-wdP"/>
+                                                                </connections>
                                                             </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t2q-wx-V3z">
+                                                            <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t2q-wx-V3z">
                                                                 <state key="normal" backgroundImage="5"/>
+                                                                <connections>
+                                                                    <action selector="onNumberPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mak-Th-lWV"/>
+                                                                </connections>
                                                             </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uQK-ld-KCn">
+                                                            <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uQK-ld-KCn">
                                                                 <state key="normal" backgroundImage="6"/>
+                                                                <connections>
+                                                                    <action selector="onNumberPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lyO-1q-MGB"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="270" horizontalCompressionResistancePriority="740" distribution="fillEqually" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="RqH-OO-TDc">
                                                         <subviews>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aSB-te-py2">
+                                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aSB-te-py2">
                                                                 <state key="normal" backgroundImage="1"/>
+                                                                <connections>
+                                                                    <action selector="onNumberPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lTB-Mr-rQe"/>
+                                                                </connections>
                                                             </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qzk-Kc-i58">
+                                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qzk-Kc-i58">
                                                                 <state key="normal" backgroundImage="2"/>
+                                                                <connections>
+                                                                    <action selector="onNumberPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Op6-oF-hqg"/>
+                                                                </connections>
                                                             </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fou-UF-rcx">
+                                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fou-UF-rcx">
                                                                 <state key="normal" backgroundImage="3"/>
+                                                                <connections>
+                                                                    <action selector="onNumberPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4zF-qn-HSU"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                     </stackView>
@@ -104,25 +131,43 @@
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U8r-fb-egF">
                                                                 <state key="normal" backgroundImage="0"/>
+                                                                <connections>
+                                                                    <action selector="onNumberPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uZH-jK-FnW"/>
+                                                                </connections>
                                                             </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DOe-5g-Urt">
+                                                            <button opaque="NO" tag="91" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DOe-5g-Urt">
                                                                 <state key="normal" backgroundImage="divide"/>
+                                                                <connections>
+                                                                    <action selector="onOperationPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fOv-58-AoK"/>
+                                                                </connections>
                                                             </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ye8-sk-uBN">
+                                                            <button opaque="NO" tag="92" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ye8-sk-uBN">
                                                                 <state key="normal" backgroundImage="multiply"/>
+                                                                <connections>
+                                                                    <action selector="onOperationPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yfc-aI-xnw"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="270" horizontalCompressionResistancePriority="740" distribution="fillEqually" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="YKl-IT-zKE">
                                                         <subviews>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Fo-Ja-dk9">
+                                                            <button opaque="NO" tag="93" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Fo-Ja-dk9">
                                                                 <state key="normal" backgroundImage="subtract"/>
+                                                                <connections>
+                                                                    <action selector="onOperationPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Fyf-I6-UjK"/>
+                                                                </connections>
                                                             </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bpm-XF-Klr">
+                                                            <button opaque="NO" tag="94" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bpm-XF-Klr">
                                                                 <state key="normal" backgroundImage="add"/>
+                                                                <connections>
+                                                                    <action selector="onOperationPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tcj-20-DAy"/>
+                                                                </connections>
                                                             </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nXZ-6u-G8e">
+                                                            <button opaque="NO" tag="99" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nXZ-6u-G8e">
                                                                 <state key="normal" backgroundImage="equal"/>
+                                                                <connections>
+                                                                    <action selector="onOperationPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fLz-y5-WHy"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                     </stackView>

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class CalcVC: UIViewController {
 
@@ -33,11 +34,80 @@ class CalcVC: UIViewController {
 	@IBOutlet weak var addBtn: UIButton!
 	@IBOutlet weak var equalBtn: UIButton!
 	
+	// Initialize calculator instance
+	var calc = Calculator()
+	
+	var btnSound: AVAudioPlayer!
+	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
+		let beepSound = Bundle.main.path(forResource: "btn", ofType: "wav")
+		let beepSoundUrl = URL(fileURLWithPath: beepSound!)
+		
+		do {
+			try btnSound = AVAudioPlayer(contentsOf: beepSoundUrl)
+			btnSound.prepareToPlay()
+		} catch let err as NSError {
+			print(err.description)
+		}
+	
+		// Test Values
+		calc.currentValue = 12
+		calc.inputValue = 4
 		
 	}
-
+	
+	// MARK: @IBActions
+	@IBAction func onNumberPress(_ sender: UIButton) {
+		
+		updateCounterValue(sender: sender)
+		
+	}
+	
+	@IBAction func onOperationPress(_ sender: UIButton) {
+		calc.currentOp = updateCurrentOperation(sender: sender)
+		print(calc.returnOperation()!)
+	}
+	
+	
+	// MARK: Functions
+	
+	func playSound() {
+		if !btnSound.isPlaying {
+			btnSound.play()
+		}
+	}
+	
+	func updateCounterValue(sender: UIButton) {
+		if counterLbl.text == "0" {
+			counterLbl.text = "\(sender.tag)"
+		} else {
+			if counterLbl.text!.characters.count < 11 {
+				counterLbl.text! += "\(sender.tag)"
+			}
+		}
+	}
+	
+	func updateCurrentOperation(sender: UIButton) -> CalcOperations? {
+		switch sender.tag {
+		case 91:
+			return .divide
+		case 92:
+			return .multiply
+		case 93:
+			return .subtract
+		case 94:
+			return .add
+		case 99:
+			return .equal
+		default:
+			return nil
+		}
+	}
+	
+	func updateCalcValues() {
+		
+	}
 }
 
