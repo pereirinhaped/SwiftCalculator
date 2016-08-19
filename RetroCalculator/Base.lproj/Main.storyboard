@@ -5,6 +5,11 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11151.4"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Minecraft.ttf">
+            <string>Minecraft</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--CalcVC-->
         <scene sceneID="tne-QT-ifu">
@@ -29,8 +34,11 @@
                                     <view contentMode="scaleToFill" horizontalHuggingPriority="270" horizontalCompressionResistancePriority="740" translatesAutoresizingMaskIntoConstraints="NO" id="AKJ-5X-DwN" userLabel="CounterContainer">
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="counter" translatesAutoresizingMaskIntoConstraints="NO" id="1KN-tP-eyz" userLabel="counterBkg"/>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oqe-Gi-qPi">
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Oqe-Gi-qPi">
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="45" id="Qwc-ix-6w3"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Minecraft" family="Minecraft" pointSize="40"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -40,12 +48,12 @@
                                             <constraint firstItem="Oqe-Gi-qPi" firstAttribute="leading" secondItem="AKJ-5X-DwN" secondAttribute="leading" constant="15" id="Dnc-Pf-YPn"/>
                                             <constraint firstAttribute="height" constant="70" id="EPI-tB-fOK"/>
                                             <constraint firstItem="1KN-tP-eyz" firstAttribute="leading" secondItem="AKJ-5X-DwN" secondAttribute="leading" id="KN1-bJ-3m4"/>
-                                            <constraint firstAttribute="bottom" secondItem="Oqe-Gi-qPi" secondAttribute="bottom" constant="5" id="VNh-YV-FG1"/>
                                             <constraint firstAttribute="trailing" secondItem="Oqe-Gi-qPi" secondAttribute="trailing" constant="15" id="YZt-jr-kBY"/>
                                             <constraint firstAttribute="trailing" secondItem="1KN-tP-eyz" secondAttribute="trailing" id="a9w-v1-jf5"/>
+                                            <constraint firstItem="Oqe-Gi-qPi" firstAttribute="centerY" secondItem="1KN-tP-eyz" secondAttribute="centerY" constant="5" id="aeV-Qr-ClS"/>
+                                            <constraint firstItem="Oqe-Gi-qPi" firstAttribute="centerX" secondItem="1KN-tP-eyz" secondAttribute="centerX" id="fEG-vi-GWW"/>
                                             <constraint firstAttribute="bottom" secondItem="1KN-tP-eyz" secondAttribute="bottom" id="j7a-O3-h4M"/>
                                             <constraint firstItem="1KN-tP-eyz" firstAttribute="top" secondItem="AKJ-5X-DwN" secondAttribute="top" id="sLP-vf-WL5"/>
-                                            <constraint firstItem="Oqe-Gi-qPi" firstAttribute="top" secondItem="AKJ-5X-DwN" secondAttribute="top" constant="5" id="wM6-jR-nrE"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" horizontalHuggingPriority="270" horizontalCompressionResistancePriority="740" translatesAutoresizingMaskIntoConstraints="NO" id="1F0-rA-dGR">
