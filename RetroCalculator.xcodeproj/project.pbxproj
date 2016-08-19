@@ -299,6 +299,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = HDUPBT5CLW;
 				INFOPLIST_FILE = RetroCalculator/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.EpicDory.RetroCalculator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -312,6 +313,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = HDUPBT5CLW;
 				INFOPLIST_FILE = RetroCalculator/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.EpicDory.RetroCalculator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -338,6 +340,7 @@
 				C1C2A24B1D65172D00D2C1B3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -15,13 +15,13 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="space-bg" translatesAutoresizingMaskIntoConstraints="NO" id="L5c-yL-vhO"/>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ground" translatesAutoresizingMaskIntoConstraints="NO" id="Es0-Wf-5KG">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="XRD-xC-PQW"/>
+                                    <constraint firstAttribute="height" constant="70" id="XRD-xC-PQW"/>
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="270" horizontalCompressionResistancePriority="740" axis="vertical" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="F6l-dN-hDt">
@@ -124,13 +124,13 @@
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstItem="CI2-ha-Jxk" firstAttribute="leading" secondItem="1F0-rA-dGR" secondAttribute="leading" id="DaC-97-vgl"/>
-                                            <constraint firstItem="Y34-mb-WU5" firstAttribute="top" secondItem="1F0-rA-dGR" secondAttribute="top" constant="20" id="F6L-wt-vEb"/>
-                                            <constraint firstAttribute="trailing" secondItem="Y34-mb-WU5" secondAttribute="trailing" constant="20" id="LjL-tv-kzy"/>
+                                            <constraint firstItem="Y34-mb-WU5" firstAttribute="top" secondItem="1F0-rA-dGR" secondAttribute="top" constant="12" id="F6L-wt-vEb"/>
+                                            <constraint firstAttribute="trailing" secondItem="Y34-mb-WU5" secondAttribute="trailing" constant="22" id="LjL-tv-kzy"/>
                                             <constraint firstItem="CI2-ha-Jxk" firstAttribute="top" secondItem="1F0-rA-dGR" secondAttribute="top" id="Mhw-p9-zIC"/>
-                                            <constraint firstAttribute="bottom" secondItem="Y34-mb-WU5" secondAttribute="bottom" constant="20" id="aVY-K8-0e9"/>
+                                            <constraint firstAttribute="bottom" secondItem="Y34-mb-WU5" secondAttribute="bottom" constant="12" id="aVY-K8-0e9"/>
                                             <constraint firstAttribute="trailing" secondItem="CI2-ha-Jxk" secondAttribute="trailing" id="nuL-Hs-zLQ"/>
                                             <constraint firstAttribute="bottom" secondItem="CI2-ha-Jxk" secondAttribute="bottom" id="pvh-W4-6Es"/>
-                                            <constraint firstItem="Y34-mb-WU5" firstAttribute="leading" secondItem="1F0-rA-dGR" secondAttribute="leading" constant="20" id="tip-2V-7v3"/>
+                                            <constraint firstItem="Y34-mb-WU5" firstAttribute="leading" secondItem="1F0-rA-dGR" secondAttribute="leading" constant="22" id="tip-2V-7v3"/>
                                         </constraints>
                                     </view>
                                 </subviews>
