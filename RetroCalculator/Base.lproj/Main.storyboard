@@ -43,7 +43,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstItem="Oqe-Gi-qPi" firstAttribute="leading" secondItem="AKJ-5X-DwN" secondAttribute="leading" constant="15" id="Dnc-Pf-YPn"/>
                                             <constraint firstAttribute="height" constant="70" id="EPI-tB-fOK"/>
@@ -63,13 +63,13 @@
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="270" horizontalCompressionResistancePriority="740" distribution="fillEqually" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="oxN-G0-QtB">
                                                         <subviews>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y8v-Wu-TmN">
+                                                            <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y8v-Wu-TmN">
                                                                 <state key="normal" backgroundImage="7"/>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9S2-jl-A3Z">
                                                                 <state key="normal" backgroundImage="8"/>
                                                             </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0aP-jh-46B">
+                                                            <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0aP-jh-46B">
                                                                 <state key="normal" backgroundImage="9"/>
                                                             </button>
                                                         </subviews>
@@ -159,6 +159,24 @@
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="L5c-yL-vhO" secondAttribute="bottom" id="uLN-GX-7LD"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="addBtn" destination="Bpm-XF-Klr" id="o4S-TB-f1n"/>
+                        <outlet property="counterLbl" destination="Oqe-Gi-qPi" id="bd7-zv-WB3"/>
+                        <outlet property="divideBtn" destination="DOe-5g-Urt" id="xQd-fu-hbn"/>
+                        <outlet property="eightBtn" destination="9S2-jl-A3Z" id="HyU-k1-jwA"/>
+                        <outlet property="equalBtn" destination="nXZ-6u-G8e" id="URR-t0-LEK"/>
+                        <outlet property="fiveBtn" destination="t2q-wx-V3z" id="Hqc-Pb-xKJ"/>
+                        <outlet property="fourBtn" destination="Kvh-Kw-IPB" id="gDn-11-npy"/>
+                        <outlet property="multiplyBtn" destination="ye8-sk-uBN" id="Auv-TQ-Tbk"/>
+                        <outlet property="nineBtn" destination="0aP-jh-46B" id="pJe-pg-C3R"/>
+                        <outlet property="oneBtn" destination="aSB-te-py2" id="DJu-HS-iii"/>
+                        <outlet property="sevenBtn" destination="Y8v-Wu-TmN" id="t9G-nG-EK2"/>
+                        <outlet property="sixBtn" destination="uQK-ld-KCn" id="9Se-wU-c7Y"/>
+                        <outlet property="subBtn" destination="6Fo-Ja-dk9" id="Pt5-lt-Nzd"/>
+                        <outlet property="threeBtn" destination="fou-UF-rcx" id="czo-S6-ee0"/>
+                        <outlet property="twoBtn" destination="qzk-Kc-i58" id="IcO-Ic-idH"/>
+                        <outlet property="zeroBtn" destination="U8r-fb-egF" id="pot-eV-2Qw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
