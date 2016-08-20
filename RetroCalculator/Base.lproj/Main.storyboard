@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11151.4"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -20,7 +21,7 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="space-bg" translatesAutoresizingMaskIntoConstraints="NO" id="L5c-yL-vhO"/>
@@ -166,7 +167,6 @@
                                                             <button opaque="NO" tag="99" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nXZ-6u-G8e">
                                                                 <state key="normal" backgroundImage="equal"/>
                                                                 <connections>
-                                                                    <action selector="onOpDoubleTap:" destination="BYZ-38-t0r" eventType="touchDownRepeat" id="7Gv-7W-BRM"/>
                                                                     <action selector="onOperationPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fLz-y5-WHy"/>
                                                                 </connections>
                                                             </button>
@@ -189,9 +189,20 @@
                                     </view>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gZX-ti-pCp">
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="gZX-ti-pCp" secondAttribute="height" multiplier="129:38" id="GWt-Sa-GZN"/>
+                                    <constraint firstAttribute="width" constant="150" id="mca-dl-fxy"/>
+                                </constraints>
+                                <state key="normal" image="clear"/>
+                                <connections>
+                                    <action selector="onClearPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LN5-1G-vsb"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="gZX-ti-pCp" firstAttribute="top" secondItem="F6l-dN-hDt" secondAttribute="bottom" constant="20" id="7CC-ll-a1I"/>
                             <constraint firstItem="F6l-dN-hDt" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="ED5-9C-PTZ"/>
                             <constraint firstItem="L5c-yL-vhO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ESP-OB-FIm"/>
                             <constraint firstAttribute="trailing" secondItem="Es0-Wf-5KG" secondAttribute="trailing" id="I4F-zZ-NBE"/>
@@ -202,6 +213,7 @@
                             <constraint firstAttribute="trailing" secondItem="F6l-dN-hDt" secondAttribute="trailing" constant="30" id="VaB-gN-I9G"/>
                             <constraint firstAttribute="trailing" secondItem="L5c-yL-vhO" secondAttribute="trailing" id="aKi-1y-PTc"/>
                             <constraint firstItem="F6l-dN-hDt" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="30" id="oge-ab-Kam"/>
+                            <constraint firstItem="gZX-ti-pCp" firstAttribute="centerX" secondItem="F6l-dN-hDt" secondAttribute="centerX" id="tol-4z-MxZ"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="L5c-yL-vhO" secondAttribute="bottom" id="uLN-GX-7LD"/>
                         </constraints>
                     </view>
@@ -242,6 +254,7 @@
         <image name="9" width="111" height="114"/>
         <image name="add" width="111" height="114"/>
         <image name="backpanel" width="620" height="938"/>
+        <image name="clear" width="333" height="114"/>
         <image name="counter" width="516" height="133"/>
         <image name="divide" width="111" height="114"/>
         <image name="equal" width="111" height="114"/>

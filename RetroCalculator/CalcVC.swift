@@ -63,9 +63,9 @@ class CalcVC: UIViewController {
 		playSound()
 		updateCalcValues(sender: sender)
 	}
-	
-	@IBAction func onOpDoubleTap(_ sender: UIButton) {
-		counterLbl.text = "0"
+	@IBAction func onClearPressed(_ sender: AnyObject) {
+		playSound()
+		resetCalc()
 	}
 	
 	// MARK: Functions
@@ -128,6 +128,11 @@ class CalcVC: UIViewController {
 				performOp()
 			}
 		}
+	}
+	
+	func resetCalc() {
+		calc.resetCalc()
+		counterLbl.text = "0"
 	}
 	
 }
