@@ -166,6 +166,7 @@
                                                             <button opaque="NO" tag="99" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nXZ-6u-G8e">
                                                                 <state key="normal" backgroundImage="equal"/>
                                                                 <connections>
+                                                                    <action selector="onOpDoubleTap:" destination="BYZ-38-t0r" eventType="touchDownRepeat" id="7Gv-7W-BRM"/>
                                                                     <action selector="onOperationPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fLz-y5-WHy"/>
                                                                 </connections>
                                                             </button>

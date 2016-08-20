@@ -51,25 +51,47 @@ class CalcVC: UIViewController {
 		} catch let err as NSError {
 			print(err.description)
 		}
-	
-		// Test Values
-		calc.currentValue = 12
-		calc.inputValue = 4
-		
 	}
 	
 	// MARK: @IBActions
 	@IBAction func onNumberPress(_ sender: UIButton) {
-		
 		updateCounterValue(sender: sender)
-		
 	}
 	
 	@IBAction func onOperationPress(_ sender: UIButton) {
-		calc.currentOp = updateCurrentOperation(sender: sender)
-		print(calc.returnOperation()!)
+		let nextOp = updateCurrentOperation(sender: sender)
+		
+		if nextOp != .equal {
+			if calc.currentValue == nil {
+				calc.currentOp = nextOp
+				calc.currentValue = Double(calc.counterText)
+				counterLbl.text = "0"
+				calc.resetCounterText()
+			} else {
+				if calc.counterText.characters.count != 0 {
+					calc.inputValue = Double(calc.counterText)
+					calc.currentValue = calc.returnOperation()
+					counterLbl.text = String(calc.currentValue!)
+					calc.currentOp = nextOp
+					calc.resetCounterText()
+				} else {
+					calc.currentOp = nextOp
+					calc.resetCounterText()	
+				}
+			}
+		} else {
+			if calc.counterText.characters.count != 0 {
+				calc.inputValue = Double(calc.counterText)
+				calc.currentValue = calc.returnOperation()
+				counterLbl.text = String(calc.currentValue!)
+				calc.resetCounterText()
+			}
+		}
 	}
 	
+	@IBAction func onOpDoubleTap(_ sender: UIButton) {
+		counterLbl.text = "0"
+	}
 	
 	// MARK: Functions
 	
@@ -80,13 +102,8 @@ class CalcVC: UIViewController {
 	}
 	
 	func updateCounterValue(sender: UIButton) {
-		if counterLbl.text == "0" {
-			counterLbl.text = "\(sender.tag)"
-		} else {
-			if counterLbl.text!.characters.count < 11 {
-				counterLbl.text! += "\(sender.tag)"
-			}
-		}
+		calc.counterText = String(sender.tag)
+		counterLbl.text = calc.counterText
 	}
 	
 	func updateCurrentOperation(sender: UIButton) -> CalcOperations? {

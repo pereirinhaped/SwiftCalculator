@@ -32,9 +32,7 @@ public class Calculator {
 			return nil
 		}
 		set {
-			if _currentValue == nil {
-				_currentValue = newValue
-			}
+			_currentValue = newValue
 		}
 	}
 	
@@ -62,24 +60,57 @@ public class Calculator {
 		}
 	}
 	
+	public var counterText: String {
+		get {
+			return _counterText
+		}
+		set {
+			if _counterText == "" {
+				_counterText = newValue
+			} else {
+				if _counterText.characters.count < 11 {
+					_counterText = zeroCleaner(aString: _counterText + newValue)
+				}
+			}
+		}
+	}
 	
 	// MARK: Operations
 	
-	// Divide
+	// Return operation result
 	public func returnOperation() -> Double? {
 		if let curValue = _currentValue {
 			if let input = _inputValue {
 				if let operation = _currentOp {
 					switch operation {
-					case .divide: return curValue / input
+					case .divide:
+						if input != 0 {
+							return curValue / input
+						} else {
+							return curValue
+						}
 					case .multiply: return curValue * input
 					case .subtract: return curValue - input
 					case .add: return curValue + input
-					case .equal: return curValue
+					case .equal: return returnOperation()
 					}
 				}
 			}
 		}
 		return nil
+	}
+	
+	// MARK: Functions
+	
+	public func resetCounterText() {
+		_counterText = ""
+	}
+	
+	func zeroCleaner(aString: String) -> String {
+		if aString.characters.first != "0" {
+			return aString
+		} else {
+			return zeroCleaner(aString: aString.substring(from: aString.index(aString.startIndex, offsetBy: 1)))
+		}
 	}
 }
