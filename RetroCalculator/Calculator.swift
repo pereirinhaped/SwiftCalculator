@@ -102,6 +102,13 @@ public class Calculator {
 	
 	// MARK: Functions
 	
+	public func resetCalc() {
+		_currentValue = nil
+		_currentOp = nil
+		_inputValue = nil
+		_counterText = ""
+	}
+	
 	public func resetCounterText() {
 		_counterText = ""
 	}
