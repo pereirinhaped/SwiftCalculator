@@ -55,38 +55,13 @@ class CalcVC: UIViewController {
 	
 	// MARK: @IBActions
 	@IBAction func onNumberPress(_ sender: UIButton) {
+		playSound()
 		updateCounterValue(sender: sender)
 	}
 	
 	@IBAction func onOperationPress(_ sender: UIButton) {
-		let nextOp = updateCurrentOperation(sender: sender)
-		
-		if nextOp != .equal {
-			if calc.currentValue == nil {
-				calc.currentOp = nextOp
-				calc.currentValue = Double(calc.counterText)
-				counterLbl.text = "0"
-				calc.resetCounterText()
-			} else {
-				if calc.counterText.characters.count != 0 {
-					calc.inputValue = Double(calc.counterText)
-					calc.currentValue = calc.returnOperation()
-					counterLbl.text = String(calc.currentValue!)
-					calc.currentOp = nextOp
-					calc.resetCounterText()
-				} else {
-					calc.currentOp = nextOp
-					calc.resetCounterText()	
-				}
-			}
-		} else {
-			if calc.counterText.characters.count != 0 {
-				calc.inputValue = Double(calc.counterText)
-				calc.currentValue = calc.returnOperation()
-				counterLbl.text = String(calc.currentValue!)
-				calc.resetCounterText()
-			}
-		}
+		playSound()
+		updateCalcValues(sender: sender)
 	}
 	
 	@IBAction func onOpDoubleTap(_ sender: UIButton) {
@@ -123,8 +98,37 @@ class CalcVC: UIViewController {
 		}
 	}
 	
-	func updateCalcValues() {
+	func updateCalcValues(sender: UIButton) {
+		let nextOp = updateCurrentOperation(sender: sender)
 		
+		func performOp() {
+			calc.inputValue = Double(calc.counterText)
+			calc.currentValue = calc.returnOperation()
+			counterLbl.text = String(calc.currentValue!)
+			calc.resetCounterText()
+		}
+		
+		if nextOp != .equal {
+			if calc.currentValue == nil {
+				calc.currentOp = nextOp
+				calc.currentValue = Double(calc.counterText)
+				counterLbl.text = "0"
+				calc.resetCounterText()
+			} else {
+				if calc.counterText.characters.count != 0 {
+					performOp()
+					calc.currentOp = nextOp
+				} else {
+					calc.currentOp = nextOp
+					calc.resetCounterText()
+				}
+			}
+		} else {
+			if calc.counterText.characters.count != 0 {
+				performOp()
+			}
+		}
 	}
+	
 }
 
